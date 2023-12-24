@@ -1,0 +1,41 @@
+Project02 
+Plan for File System in Java
+Jake Abendroth
+November 29, 2023
+
+	I plan to write a FileObj class detailing all of the methods and attributes needed
+by other classes to be used in the filesystem. I plan to have variables such as filename,
+location, file size in bytes, and the parent directory. Methods for this class will be
+mostly getter and setter methods, such as to return the file size, contents, or directory,
+and to change or return the filename depending on what commands are called.
+
+	Another class I plan to write is a class called Folder, which has private variables 
+such as the directory name, parent directory, and contents of the directory. While methods
+for this class will mostly return attributes of the directory such as name, location, and
+contents, there will have to be a recursive method to calculate the disk usage that all of 
+the directory's contents, including subdirectories, occupy.
+
+	I may decide to use inheritance or an interface to improve the modularity between FileObj
+and Folder, as they have common methods and attributes.
+
+	The main class FileSys will regulate these two classes, and work with them together
+to allow the user to use commands available in primarily UNIX systems. The commands available 
+are only relating to files, 
+	- create filename (creates a file)
+	- cat filename (prints file contents)
+	- rm filename (deletes a file)
+	- mkdir dirname (creates directory)
+	- rmdir dirname (deletes directory)
+	- cd dirname (change working directory)
+	- ls (list directory contents)
+	- du (disk usage)
+	- pwd (print working directory)
+	- find name 
+	- exit (exit program)
+While waiting for user input through System.in, if the user enters these commands correctly,
+the "file system" will be manipulated, allowing the user control of a terminal. Each of these
+commands will have their own method in the class, with only the method call + parameters
+remaining in the main method. The main method will loop with each input and repeat
+"prompt> " on the line user input is available, only before each input. These methods will all
+have error catching and reporting, preventing crashes through try-catch blocks and/or if statements.
+All errors will be reported through System.err with a detailed reason.

@@ -1,0 +1,82 @@
+create
+create testfile
+<contents
+end here>~
+create testfile
+create testFile
+a~
+create testfile2
+~ empty file
+mkdir test3
+create test3
+cat
+cat testfile
+cat test3
+cat test
+cat testfile2
+rm
+rm testfile
+rm test
+rm test3
+mkdir
+mkdir testDir
+mkdir testfile2
+mkdir test3
+rmdir
+rmdir testDir
+rmdir test
+rmdir testfile2
+cd
+cd /test3
+mkdir subdir
+cd subdir
+pwd
+create subdirFile
+heres my bytes aaaaaaa 
+~
+ls
+pwd
+du
+cd ..
+ls
+pwd
+du
+cd ..
+cd test3
+ls
+du
+cd ..
+ls
+cd /testfile2
+cd testfile2
+cd /
+ls
+du
+pwd
+mkdir separate
+cd separate
+create findMe
+aaaaaaa~
+cd ..
+du
+mkdir separate2
+cd separate2
+create findMe
+aaaaaaa~
+cd ..
+du
+mkdir separate3
+cd separate3
+create findMe
+aaaaaaa~
+cd ..
+du
+cd /
+find
+find testfile2
+find test3
+find subdir
+find subdirFile
+find iDontExist
+find findMe
+exit

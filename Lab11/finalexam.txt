@@ -1,0 +1,3 @@
+I am able to take the final on December 8th from 10am-noon: TRUE
+I am able to take the final on December 8th from 1pm-3pm: FALSE
+I am able to take the final on December 8th from 3-5 pm: FALSE

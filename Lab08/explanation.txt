@@ -1,0 +1,21 @@
+In method FunWithInteger(), two Integers are created and DoubleMe(Integer) is called. Since DoubleMe() doesn't
+actually mutate the parameter's value outside of the function, nothing changes. 1, 1 is printed. y = DoubleMe(1) changes y to 2.
+Prints 1, 2. x = DoubleMe(2) changes x to 4. Prints 4, 2. x = DoubleMe(4) changes x to 8, and prints 8, 2 for D.
+
+In method FunWithMyInt(), two MyInt objects are created. x.DoubleMe() does modify the instance variable m_value, so 2, 1 is printed.
+y.set(x.DoubleMe()) assigns the instance variable of y to the doubled value of x which is 4, as well as assigning x to its doubled value, 
+printing 4, 4. x.set(y.DoubleMe(y)) sets x's value to the doubled value of y, while changing y to 8 as well, printing 8, 8.
+x.set(x.DoubleMe(x)) doubles x into 16 then sets x's value to 16, printing 16, 8. y.DoubleMe() does mutate y.m_value so the
+final print will be 16, 16.
+
+
+Output:
+A: 1, 1 // Integer
+B: 1, 2 // Integer
+C: 4, 2 // Integer 
+D: 8, 2 // Integer
+E: 2, 1 // MyInt
+F: 4, 4 // MyInt
+G: 8, 8 // MyInt
+H: 16, 8 // MyInt
+I: 16, 16 // MyInt
